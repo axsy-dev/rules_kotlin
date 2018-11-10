@@ -5,7 +5,7 @@ java_library(
         "//external:jar/io_bazel_rules_kotlin_org/jetbrains/annotations"
     ],
     visibility = [
-        "//third_party/jvm:__subpackages__"
+        "//visibility:public"
     ]
 )
 
