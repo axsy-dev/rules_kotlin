@@ -134,7 +134,7 @@ _implicit_deps = {
     "_toolchain": attr.label(
         doc = """The Kotlin JVM Runtime. it's only purpose is to enable the Android native rules to discover the Kotlin
         runtime for dexing""",
-        default = Label("@" + _KT_COMPILER_REPO + "//:kotlin-runtime"),
+        # default = Label("@" + _KT_COMPILER_REPO + "//:kotlin-runtime"),
         cfg = "target",
     ),
 }
