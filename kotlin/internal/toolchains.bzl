@@ -103,6 +103,16 @@ _kt_toolchain = rule(
             using `tags` attribute defined directly on the rules.""",
             allow_empty = True,
         ),
+        "coroutines": attr.string(
+            doc = "the -Xcoroutines flag, enabled by default as it's considered production ready 1.2.0 onward.",
+            default = "",
+            values = [
+                "",
+                "enable",
+                "warn",
+                "error",
+            ],
+        ),
         "jvm_runtime": attr.label(
             doc = "The implicit jvm runtime libraries. This is internal.",
             # default = Label("@" + _KT_COMPILER_REPO + "//:kotlin-runtime"),
