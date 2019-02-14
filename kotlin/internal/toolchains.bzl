@@ -79,19 +79,21 @@ _kt_toolchain = rule(
             cfg = "host",
         ),
         "language_version": attr.string(
-            doc = "this is the -languag_version flag [see](https://kotlinlang.org/docs/reference/compatibility.html)",
-            default = "1.2",
+            doc = "this is the -language_version flag [see](https://kotlinlang.org/docs/reference/compatibility.html)",
+            default = "1.3",
             values = [
                 "1.1",
                 "1.2",
+                "1.3",
             ],
         ),
         "api_version": attr.string(
             doc = "this is the -api_version flag [see](https://kotlinlang.org/docs/reference/compatibility.html).",
-            default = "1.2",
+            default = "1.3",
             values = [
                 "1.1",
                 "1.2",
+                "1.3"
             ],
         ),
         "debug": attr.string_list(
@@ -100,15 +102,6 @@ _kt_toolchain = rule(
             enabled via the defines `kt_timings=1` and `kt_trace=1`. These can also be enabled on a per target bases by
             using `tags` attribute defined directly on the rules.""",
             allow_empty = True,
-        ),
-        "coroutines": attr.string(
-            doc = "the -Xcoroutines flag, enabled by default as it's considered production ready 1.2.0 onward.",
-            default = "enable",
-            values = [
-                "enable",
-                "warn",
-                "error",
-            ],
         ),
         "jvm_runtime": attr.label(
             doc = "The implicit jvm runtime libraries. This is internal.",

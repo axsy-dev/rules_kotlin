@@ -30,4 +30,5 @@ toolchain_type(
 
 define_kt_toolchain(
     name = "default_toolchain",
+    coroutines = None
 )
