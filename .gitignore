@@ -1,2 +1,9 @@
 **/bazel-*
 **/.project
+.idea/
+.ijwb/
+lib/
+src/main/main.iml
+src/test/data/data.iml
+src/test/data/jvm/basic/basic.iml
+src/test/test.iml
