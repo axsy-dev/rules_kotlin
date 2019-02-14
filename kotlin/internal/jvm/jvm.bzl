@@ -134,7 +134,7 @@ _implicit_deps = {
     "_toolchain": attr.label(
         doc = """The Kotlin JVM Runtime. it's only purpose is to enable the Android native rules to discover the Kotlin
         runtime for dexing""",
-        default = Label("@" + _KT_COMPILER_REPO + "//:kotlin-runtime"),
+        # default = Label("@" + _KT_COMPILER_REPO + "//:kotlin-runtime"),
         cfg = "target",
     ),
 }
@@ -337,6 +337,14 @@ kt_jvm_import = rule(
             doc = """Additional runtime deps.""",
             default = [],
             mandatory = False,
+            providers = [JavaInfo],
+        ),
+        "exports": attr.label_list(
+            doc = """Exported libraries.
+
+            Deps listed here will be made available to other rules, as if the parents explicitly depended on
+            these deps. This is not true for regular (non-exported) deps.""",
+            default = [],
             providers = [JavaInfo],
         ),
         "neverlink": attr.bool(
