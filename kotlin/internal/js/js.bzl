@@ -57,6 +57,7 @@ kt_js_library = rule(
         "data": attr.label_list(
             allow_files = True,
             default = [],
+            cfg = "target",
         ),
         "deps": attr.label_list(
             doc = """A list of other kotlin JS libraries.""",
