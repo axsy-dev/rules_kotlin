@@ -1,5 +1,8 @@
 **/bazel-*
 **/.project
+.DS_Store
+kotlin/.DS_Store
+kotlin/internal/internal.iml
 .idea/
 lib/
 src/main/main.iml
