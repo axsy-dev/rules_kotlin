@@ -99,6 +99,7 @@ class KotlinBuilder @Inject internal constructor(
         SOURCE_ROOTS("--source_roots"),
         SOURCE_JARS("--source_jars"),
         SOURCE_PATH("--sourcepath"),
+        BOOT_CLASSPATH("--bootclasspath"),
         PROCESSOR_PATH("--processorpath"),
         PROCESSORS("--processors"),
         EXT_CLASSPATH("--extclasspath"),
